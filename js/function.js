@@ -229,6 +229,7 @@ if (loader) {
         setTimeout(function () {
           overlay.style.opacity = '0';
           overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+          window.location.href = "home.html";
 
           // Después de que la opacidad sea 0, oculta el overlay
           setTimeout(function () {
