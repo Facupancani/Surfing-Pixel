@@ -1,0 +1,2484 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surfing Pixel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div id="overlayCarga">
+        <div>
+            <div class="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="loader-container">
+                <span class="loaderNum h2" id="loaderNum">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div id="logo" onclick="register()"></div>
+        <div id="barraBusqueda">
+            <span class="textoChico">Buscar juegos.</span>
+            <div id="lupa"></div>
+        </div>
+        <div id="perfil">
+            <div id="iconoPerfil">
+                <div class="circulo">
+                    <div class="borde">
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/gumball.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="perfilInfo" onclick="toggleMenu()">
+                <p class="h3">Gumball</p>
+                <div id="perfilDebajo" > <!-- Agrega el evento clic directamente aquí -->
+                    <p class="textoChico">Lvl: 15</p>
+                    <div id="flechaPerfil"></div>
+                </div>
+                <div id="hamburguesa" style="display: none;">
+                    <img src="resources/icos/simbolos/hamburguesa.png" alt="Imagen de perfil">
+                </div>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="menuCategorias">
+        <div id="catContainer">
+            <ul id="menuCategoriasul">
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/carreras.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/basquet.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Basquet</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/belleza.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">belleza</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/ben10.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Ben 10</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/cartas.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Cartas</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/casual.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Casual</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/coches.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Coches</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Aventura</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/disparos.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Disparos</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/escape.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Escape</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/minecraft.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Minecraft</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/motos.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Motos</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/gumball.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">POOL</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/stickman.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">stickman</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/terror.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Terror</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/vestir.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Vestir</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="categoria">
+                    <div class="circulo">
+                        <div class="borde"></div>
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/dipper.svg" alt="">
+                        </div>
+                        <div class="contenedorCategoria">
+                            <p class="textoCategoria">Carreras</p>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+        <div id="flechasCategoria">
+            <button id="flechaColorIzq"></button>
+            <button id="flechaColor"></button>
+        </div>
+    </div>
+
+    <div id="biblioteca">
+        <div class="tituloBiblioteca">
+            <h1>Tu Biblioteca</h1>
+        </div>
+        <section id="carruselBiblioteca">
+            <div class="containerMovedizo ContainerBiblioteca">
+                <div class="sup">
+                    <div class="cardContainerBiblioteca">
+                        <div class="cardBiblioteca">
+                            <img class="card-ImgBiblioteca" src="resources/imagenes/juegos/A rebotar.webp">
+                            <div class="nameTag">
+                                <span class="h2">A rebotar</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardContainerBiblioteca">
+                        <div class="cardBiblioteca">
+                            <img class="card-ImgBiblioteca" src="resources/imagenes/juegos/Las momias y el anillo perdido.webp">
+                            <div class="nameTag">
+                                <span class="h2">Momias of ring</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardContainerBiblioteca">
+                        <div id="coment"><h4>¡Pruebame!</h4></div>
+                        <a href="juego.html">
+                            <div class="cardBiblioteca">
+                                <img class="card-ImgBiblioteca" src="resources/imagenes/juegos/spyvspy.jpeg">
+                                <div class="nameTag">
+                                    <span class="h2">SpyvsSpy</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cardContainerBiblioteca">
+                        <div class="cardBiblioteca">
+                            <img class="card-ImgBiblioteca" src="resources/imagenes/cards/es.f2d237b4.webp">
+                            <div class="nameTag">
+                                <span class="h2">Caos en el Tooniverso</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inf">
+                    <div class="cardContainerBiblioteca">
+                        <div class="cardBiblioteca">
+                            <img class="card-ImgBiblioteca" src="resources/imagenes/cards/es.f2d237b4.webp">
+                            <div class="nameTag">
+                                <span class="h2">Caos en el Tooniverso</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardContainerBiblioteca">
+                        <div class="cardBiblioteca">
+                            <img class="card-ImgBiblioteca" src="resources/imagenes/juegos/Que animaniac eres.webp">
+                            <div class="nameTag">
+                                <span class="h2">Que animaniac eres?</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardContainerBiblioteca">
+                        <div class="cardBiblioteca">
+                            <img class="card-ImgBiblioteca" src="resources/imagenes/juegos/Escuadron reciclaje.webp">
+                            <div class="nameTag">
+                                <span class="h2">Escuadron reciclaje</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardContainerBiblioteca">
+                        <div class="cardBiblioteca">
+                            <img class="card-ImgBiblioteca" src="resources/imagenes/cards/es.f2d237b4.webp">
+                            <div class="nameTag">
+                                <span class="h2">Caos en el Tooniverso</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <div class="btnContainer">
+            <div id="botonTodos">Ver todos</a></div>
+        </div>
+    </div>
+
+    <div id="gameSection">
+
+        <div id="upperSection">
+            <img id="publicidad" src="resources/imagenes/otros/publicidad1.jpg" alt="publicidad">
+            <div class="upperCarruseles">
+                <div class="carruselData">
+                    <h1>Destacados</h1>
+                    <section class="carrusel carruselChico">
+                        <div class="containerMovedizo">
+                            <div id="gameContainer">
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img" src="resources/imagenes/juegos/A rebotar.webp">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">A rebotar!</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img" src="resources/imagenes/juegos/Apex Legends.jpg">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Apex Legends</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="resources/imagenes/juegos/Batalla de omnibolas.webp">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Batalla de las omnibolas</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="resources/imagenes/juegos/Escape Misterioso.webp">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Escape Misterioso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="resources/imagenes/juegos/Escuadron reciclaje.webp">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Escuadron reciclaje</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="botones">
+                                <div class="botonIzquierdaChico">
+                                    <button class="slideBtn left" aria-label="flecha izquierda"></button>
+                                </div>
+                                <div class="botonDerechaChico">
+                                    <button class="slideBtn right" aria-label="flecha derecha"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+                </div>
+                <div class="carruselData">
+                    <h1>Solo para ti</h1>
+                    <section class="carrusel carruselChico">
+                        <div class="containerMovedizo">
+                            <div id="gameContainer">
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img" src="resources/imagenes/juegos/World of Tanks.jpg">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">World of Tanks</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="resources/imagenes/juegos/Tom Clancys The division 2.jpg">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Tom clancys The division</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="resources/imagenes/juegos/Copatoon - Campeones+.webp">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Campeones De Copatoon</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="botones">
+                                <div class="botonIzquierdaChico">
+                                    <button class="slideBtn left" aria-label="flecha izquierda"></button>
+                                </div>
+                                <div class="botonDerechaChico">
+                                    <button class="slideBtn right" aria-label="flecha derecha"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div id="downSection">
+            <div class="upperCarruseles">
+                <div class="carruselData">
+                    <h1>Juegos gratis</h1>
+                    <section class="carrusel carruselLargo">
+                        <div class="containerMovedizo">
+                            <div id="gameContainer">
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="resources/imagenes/juegos/test de villanidad.webp">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Test de Villanidad</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="resources/imagenes/juegos/Returnal.jpg">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Returnal</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="resources/imagenes/juegos/Son of the forest.jpg">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Son of The forest</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="botones">
+                                <div class="botonIzquierda">
+                                    <button class="slideBtn left" aria-label="flecha izquierda"></button>
+                                </div>
+                                <div class="botonDerecha">
+                                    <button class="slideBtn right" aria-label="flecha derecha"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+                </div>
+                <div class="carruselData">
+                    <h1>Accion</h1>
+                    <section class="carrusel carruselLargo">
+                        <div class="containerMovedizo">
+                            <div id="gameContainer">
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="resources/imagenes/juegos/Locura en la montaña.webp">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Locura en la montaña</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="resources/imagenes/juegos/Fiesta de agua.webp">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Fiesta de agua</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="botones">
+                                <div class="botonIzquierda">
+                                    <button class="slideBtn left" aria-label="flecha izquierda"></button>
+                                </div>
+                                <div class="botonDerecha">
+                                    <button class="slideBtn right" aria-label="flecha derecha"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+                </div>
+                <div class="carruselData">
+                    <h1>Aventura</h1>
+                    <section class="carrusel carruselLargo">
+                        <div class="containerMovedizo">
+                            <div id="gameContainer">
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="card">
+                                        <div class="cardSup">
+                                            <img class="card-Img"
+                                                src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                            <div class="tagContainer">
+                                                <div class="tagPrecio">
+                                                    <p class="h4">$3.99</p>
+                                                </div>
+                                                <div id="cardTag" onclick="toggleEstado(this)">
+                                                    <img id="carritoIco" src="resources\icos\simbolos\carrito.svg"
+                                                        alt="">
+                                                    <span class="textoBotones">Agregar</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="data-category-container">
+                                                <div class="data-category">
+                                                    <span class="texto-chico">Accion - Aventura</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="playBtn">
+                                                <span class="icon links"></span>
+                                            </div>
+
+
+                                            <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="botones">
+                                <div class="botonIzquierda">
+                                    <button class="slideBtn left" aria-label="flecha izquierda"></button>
+                                </div>
+                                <div class="botonDerecha">
+                                    <button class="slideBtn right" aria-label="flecha derecha"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footerContent">
+            <div id="footerUp">
+                <div class="lorem">
+                    <hr style="border: none; background-color: white; width: 2px;">
+                    <p class="textoBody">
+                        ¡Tenemos cientos de juegos online gratis para niños con los que podrás jugar con tus personajes
+                        favoritos de Surfin pixel en cualquier momento! Descubre aquí todos los juegos de aventuras,
+                        rompecabezas, acción, habilidad y deportes que tenemos para ti. ¿Quieres jugar a juegos de
+                        cartas para chicos y chicas, o prefieres ayudar a Gumball y Darwin a fugarse de Elmore?  Podrás
+                        hacerlo con “Huida de Elmore”, uno de nuestros juegos más populares : a ver qué puntuación
+                        consigues en este juego gratuito alucinante. También puedes jugar a uno de nuestros juegos de
+                        aventuras en el mundo de Hora de aventuras o junto a los famosos Rigby y Mordecai.
+                    </p>
+                </div>
+                <div class="linkTrees">
+                    <div class="footerGeneral">
+                        <h1>General</h1>
+                        <div class="footerMinContent">
+                            <hr style="border: none; background-color: white; width: 2px;">
+                            <div class="links">
+                                <h4 class="h4">QUIENES SOMOS?</h4>
+                                <h4 class="h4">FAQS</h4>
+                                <h4 class="h4">CONTACTO</h4>
+                                <h4 class="h4">TRABAJA CON NOSOTROS</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footerSiguenos">
+                        <h1>Siguenos</h1>
+                        <div class="footerMinContent">
+                            <hr style="border: none; background-color: white; width: 2px;">
+                            <div class="links">
+                                <h4 class="h4">INSTAGRAM</h4>
+                                <h4 class="h4">FACEBOOK</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copi">
+                <p class="textoChico">El uso de este sitio significa la aceptacion de los terminos de uso.</p>
+                <p class="textoChico">TM & 2023 SURFING PIXEL. Unca compañia de FacuMedia.</p>
+            </div>
+            <div id="footerDown">
+                <div id="logo"></div>
+                <div id="opcionesFooter">
+                    <h4 class="h4">TERMINOS DE USO</h4>
+                    <h4 class="h4">GESTIONAR PREFERENCIAS</h4>
+                    <h4 class="h4">POLITICA DE PRIVACIDAD</h4>
+                </div>
+            </div>
+        </div>
+        <img id="lineaColor" src="resources/imagenes/otros/lineaColor.svg" alt="lineaColor">
+
+    </footer>
+    </div>
+</body>
+<script src="js/function.js"></script>

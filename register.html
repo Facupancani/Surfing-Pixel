@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Surfing Pixel</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+<body>
+
+    <div id="fondoForm">
+        <form id="registerForm">
+            <h1>Registrarse</h1>
+            <div class="formContent">
+                <div class="seccionIzq">
+                    <label for="nombre" class="h4 required">NOMBRE</label>
+                    <input type="text" id="" name="" required>
+                    <label for="nombre" class="h4 required">APELLIDO</label>
+                    <input type="text" id="" name="" required>
+                    <label for="nombre" class="h4">NICKNAME</label>
+                    <input type="text" id="" name="" >
+                    <label for="nombre" class="h4 required">EDAD</label>
+                    <input type="text" id="" name="" required>
+                </div>
+                <hr style="border: none; background-color: white; width: 2px;">
+                <div class="seccionDer">
+                    <label for="nombre" class="h4 required">CORREO ELECTRONICO</label>
+                    <input type="text" id="" name="" required>
+                    <label for="nombre" class="h4 required">CONTRASEÑA</label>
+                    <input type="text" id="" name="" required>
+                    <label for="nombre" class="h4 required">CONFIRMAR CONTRASEÑA</label>
+                    <input type="text" id="" name="" required>
+                    <img src="resources/imagenes/otros/capcha.png"> 
+                </div>
+            </div>
+
+            <div class="formBotonera">
+                <button onclick="registrarse(this)" class="botonSecundario">
+                    <p class="textoBotones">Registrarse</p>
+                </button>
+                <p class="textoChico">¿Ya tienes una cuenta?</p>
+                <span class="textoChico" onclick="login()">Iniciar Sesión</span>    
+            </div>
+        </form>     
+    </div>
+
+
+            </div>
+</body>
+<script src="js/function.js"></script>

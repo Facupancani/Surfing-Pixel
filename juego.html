@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surfing Pixel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+
+
+    <nav>
+        <div id="logo" onclick="home()"></div>
+        <div id="barraBusqueda">
+            <span class="textoChico">Buscar juegos.</span>
+            <div id="lupa"></div>
+        </div>
+        <div id="perfil">
+            <div id="iconoPerfil">  
+                <div class="circulo">
+                    <div class="borde">
+                        <div class="centro">
+                            <img class="imgCategoria" src="resources/icos/personajes/gumball.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="perfilInfo">
+                <p class="h3">Gumball</p>
+                <div id="perfilDebajo">
+                    <p class="textoChico">Lvl: 15</p>
+                    <div id="flechaPerfil"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="breadCrumb">
+        <button id="flechaColorIzq"></button>
+        <p class="textoBody">Inicio</p>
+    </div>
+
+    <div id="gameArea">
+        <canvas id="miCanvas" width="1322" height="720"></canvas>
+        <img src='./resources/icos/juego/interior.png' id="casillero" class="hidden">
+        <div id="herramientasJuego">
+            <img src="resources/imagenes/otros/social.png" class="social" alt="social">
+            <button id="ayuda" onclick="mostrarReglas()">?</button>
+        </div>
+        <div id="reglas" style="display: none;">
+            <img src="resources/icos/simbolos/reglas.png" alt="">
+        </div>
+    </div>
+
+    <div id="margen">
+        <section id="gameWrapper">
+            <section id="wrapperIzq">
+                <div id="about">
+                    <span class="h1">Acerca del juego</span>
+                    <img class="multimedia" src="resources/imagenes/otros/Multimedia.png" alt="">
+                    <p class="textoBody">Es una guerra constante! Juega con amigos a esta versión del clasico juego de 4
+                        en linea, de la mano de nuestros ingeniosos Espias que intentaran llevarse la victoria a como de
+                        lugar,
+                        usando ingeniosos inventos y engaños. ¡La diversion no termina!</p>
+                </div>
+                <section id="comentarios">
+                    <div id="headerComentarios">
+                        <p class="h1">Comentarios</p>
+                        <hr style="border: none; background-color: white; height: 50px; width: 2px; margin-left: 50px; margin-right: 50px; opacity: 80%;">
+                        <p class="textoChico">3 comentarios</p>
+                    </div>
+
+                    <div id="comentar">
+                        <div class="myUsuario">
+                            <div class="circulo">
+                                <div class="borde"></div>
+                                <div class="centro">
+                                    <img class="imgCategoria" src="resources/icos/personajes/gumball.svg" alt="">
+                                </div>
+                            </div>
+                            <div></div>
+                            <p class="nombreMyUsuario h2">Gumball Watterson</p>
+                        </div>
+                        <div class="bloqueComentar">
+                            <p class="textoChico">Que te parecio el juego?</p>
+                        </div>
+                        <div class="botoneraComentar">
+                            <p class="textoChico">Cancelar</p>
+                            <button class="botonSecundario">
+                                <p class="textoBotones">Comentar</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="filtros">
+                        <p class="h4">DESTACADOS - RECIENTES - MAS ANTIGUOS</p>
+                    </div>
+
+                    <section id="verComentarios">
+                        <div id="comentarioUsuario">
+                            <div class="otroUsuario">
+                                <div class="circulo">
+                                    <div class="borde"></div>
+                                    <div class="centro">
+                                        <img class="imgCategoria" src="resources/icos/personajes/finn.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="infoUsuario">
+                                    <p class="nombreMyUsuario h2">Finn el humano</p>
+                                    <p class="nombreMyUsuario textoChico">9 de Septiembre de 2023</p>
+                                </div>
+                            </div>
+                            <div class="bloqueComentario">
+                                <p class="textoChico">A Jake y a mi nos encanta! Definitivamente nuestro nuevo juego
+                                    favorito! :P</p>
+                            </div>
+                            <div class="botoneraComentar">
+                                <img src="resources/icos/simbolos/likes.png" alt="">
+                            </div>
+                        </div>
+                        <div id="comentarioUsuario">
+                            <div class="otroUsuario">
+                                <div class="circulo">
+                                    <div class="borde"></div>
+                                    <div class="centro">
+                                        <img class="imgCategoria" src="resources/icos/personajes/finn.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="infoUsuario">
+                                    <p class="nombreMyUsuario h2">Finn el humano</p>
+                                    <p class="nombreMyUsuario textoChico">9 de Septiembre de 2023</p>
+                                </div>
+                            </div>
+                            <div class="bloqueComentario">
+                                <p class="textoChico">A Jake y a mi nos encanta! Definitivamente nuestro nuevo juego
+                                    favorito! :P</p>
+                            </div>
+                            <div class="botoneraComentar">
+                                <img src="resources/icos/simbolos/likes.png" alt="">
+                            </div>
+                        </div>
+                    </section>
+
+                </section>
+            </section>
+
+            <section id="wrapperDer">
+                <div id="carruselVertical">
+                    <div class="cardContainer">
+                        <div class="card">
+                            <div class="cardSup">
+                                <img class="card-Img"
+                                    src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                <div class="tagContainer">
+                                    <div class="tagPrecio">
+                                        <p class="h4">$3.99</p>
+                                    </div>
+                                    <div id="cardTag">
+                                        <img id="carritoIco" src="resources\icos\simbolos\carrito.svg" alt="">
+                                        <span class="textoBotones">Agregar</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data">
+                                <div class="data-category-container">
+                                    <div class="data-category">
+                                        <span class="texto-chico">Accion - Aventura</span>
+                                    </div>
+                                </div>
+
+                                <div class="playBtn">
+                                    <span class="icon links"></span>
+                                </div>
+
+
+                                <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cardContainer">
+                        <div class="card">
+                            <div class="cardSup">
+                                <img class="card-Img"
+                                    src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                <div class="tagContainer">
+                                    <div class="tagPrecio">
+                                        <p class="h4">$3.99</p>
+                                    </div>
+                                    <div id="cardTag">
+                                        <img id="carritoIco" src="resources\icos\simbolos\carrito.svg" alt="">
+                                        <span class="textoBotones">Agregar</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data">
+                                <div class="data-category-container">
+                                    <div class="data-category">
+                                        <span class="texto-chico">Accion - Aventura</span>
+                                    </div>
+                                </div>
+
+                                <div class="playBtn">
+                                    <span class="icon links"></span>
+                                </div>
+
+
+                                <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cardContainer">
+                        <div class="card">
+                            <div class="cardSup">
+                                <img class="card-Img"
+                                    src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                <div class="tagContainer">
+                                    <div class="tagPrecio">
+                                        <p class="h4">$3.99</p>
+                                    </div>
+                                    <div id="cardTag">
+                                        <img id="carritoIco" src="resources\icos\simbolos\carrito.svg" alt="">
+                                        <span class="textoBotones">Agregar</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data">
+                                <div class="data-category-container">
+                                    <div class="data-category">
+                                        <span class="texto-chico">Accion - Aventura</span>
+                                    </div>
+                                </div>
+
+                                <div class="playBtn">
+                                    <span class="icon links"></span>
+                                </div>
+
+
+                                <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cardContainer">
+                        <div class="card">
+                            <div class="cardSup">
+                                <img class="card-Img"
+                                    src="https://cn.i.cdn.ti-platform.com/content/316/caos-en-el-tooniverso/link/ar/card_cit_es.c5f0b2b1.jpg?imwidth=300">
+                                <div class="tagContainer">
+                                    <div class="tagPrecio">
+                                        <p class="h4">$3.99</p>
+                                    </div>
+                                    <div id="cardTag">
+                                        <img id="carritoIco" src="resources\icos\simbolos\carrito.svg" alt="">
+                                        <span class="textoBotones">Agregar</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data">
+                                <div class="data-category-container">
+                                    <div class="data-category">
+                                        <span class="texto-chico">Accion - Aventura</span>
+                                    </div>
+                                </div>
+
+                                <div class="playBtn">
+                                    <span class="icon links"></span>
+                                </div>
+
+
+                                <div class="titulo"><span class="h2">Caos en el Tooniverso</span></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+    </div>
+    <audio id="musica" autoplay loop>
+        <source src="./resources/audio/musica.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="sfx" autoplay>
+        <source src="./resources/audio/ponerFicha.mp3" type="audio/mpeg">
+    </audio>
+    <footer>
+        <div id="footerContent">
+            <div id="footerUp">
+                <div class="lorem">
+                    <hr style="border: none; background-color: white; width: 2px;">
+                    <p class="textoBody">
+                        ¡Tenemos cientos de juegos online gratis para niños con los que podrás jugar con tus personajes
+                        favoritos de Surfin pixel en cualquier momento! Descubre aquí todos los juegos de aventuras,
+                        rompecabezas, acción, habilidad y deportes que tenemos para ti. ¿Quieres jugar a juegos de
+                        cartas para chicos y chicas, o prefieres ayudar a Gumball y Darwin a fugarse de Elmore?  Podrás
+                        hacerlo con “Huida de Elmore”, uno de nuestros juegos más populares : a ver qué puntuación
+                        consigues en este juego gratuito alucinante. También puedes jugar a uno de nuestros juegos de
+                        aventuras en el mundo de Hora de aventuras o junto a los famosos Rigby y Mordecai.
+                    </p>
+                </div>
+                <div class="linkTrees">
+                    <div class="footerGeneral">
+                        <h1>General</h1>
+                        <div class="footerMinContent">
+                            <hr style="border: none; background-color: white; width: 2px;">
+                            <div class="links">
+                                <h4 class="h4">QUIENES SOMOS?</h4>
+                                <h4 class="h4">FAQS</h4>
+                                <h4 class="h4">CONTACTO</h4>
+                                <h4 class="h4">TRABAJA CON NOSOTROS</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footerSiguenos">
+                        <h1>Siguenos</h1>
+                        <div class="footerMinContent">
+                            <hr style="border: none; background-color: white; width: 2px;">
+                            <div class="links">
+                                <h4 class="h4">INSTAGRAM</h4>
+                                <h4 class="h4">FACEBOOK</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copi">
+                <p class="textoChico">El uso de este sitio significa la aceptacion de los terminos de uso.</p>
+                <p class="textoChico">TM & 2023 SURFING PIXEL. Unca compañia de FacuMedia.</p>
+            </div>
+            <div id="footerDown">
+                <div id="logo"></div>
+                <div id="opcionesFooter">
+                    <h4 class="h4">TERMINOS DE USO</h4>
+                    <h4 class="h4">GESTIONAR PREFERENCIAS</h4>
+                    <h4 class="h4">POLITICA DE PRIVACIDAD</h4>
+                </div>
+            </div>
+        </div>
+        <img id="lineaColor" src="resources/imagenes/otros/lineaColor.svg" alt="lineaColor">
+
+    </footer>
+    </div>
+</body>
+<script src="js/temporizador.js"></script>
+<script src="js/boton.js"></script>
+<script src="js/ficha.js"></script>
+<script src="js/casilla.js"></script>
+<script src="js/tablero.js"></script>
+<script src="js/juego.js"></script>
+<script src="js/function.js"></script>

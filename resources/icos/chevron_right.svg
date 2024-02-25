@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icon/Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M11.2090206,25.7530856 C10.3589676,26.6010616 8.9830352,26.6010616 8.13471333,25.7522196 C7.28841086,24.903839 7.28841086,23.5282414 8.13513883,22.6799544 L16.8704088,13.9443 L8.13674661,5.21025339 C7.28828446,4.36179124 7.28828446,2.98600876 8.13620626,2.13808779 C8.98437335,1.28732214 10.361307,1.28732214 11.2094603,2.13755349 L21.4808368,12.4093302 C21.8937144,12.8217024 22.1167,13.3719799 22.1167,13.9443 C22.1167,14.517388 21.8932883,15.0706326 21.48055,15.4811568 L11.2090206,25.7530856 Z" id="Fill-1" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

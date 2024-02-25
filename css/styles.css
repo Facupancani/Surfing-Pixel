@@ -1,0 +1,1456 @@
+@font-face {
+    font-family: 'TT Norms';
+    src: url(../fonts/TT-Norms®-Pro/Demo_Fonts/Fontspring-DEMO-tt_norms_pro_extrablack.otf);
+}
+
+@font-face {
+    font-family: 'Avenir Black';
+    src: url(../fonts/Avenir-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Avenir Book';
+    src: url(../fonts/Avenir-Book.ttf);
+}
+
+@font-face {
+    font-family: 'Avenir Regular';
+    src: url(../fonts/Avenir-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Avenir Heavy';
+    src: url(../fonts/Avenir-Heavy.ttf);
+}
+
+:root{
+    --backround-color: var(--color-primario);
+
+    --color-primario: #0D0303;
+    --color-secundario: #CC0F76;
+    --color-arcoiris:linear-gradient(to right, #CB487B, #D1B507 ,#5FAA5A ,#3193C7 );
+    --color-degrade: linear-gradient(180deg, #CC0F76 32.81%, #810047 100%);
+    --color-degradeV2: linear-gradient(180deg, #CC0F76 4.69%, #AA0860 42.71%, #810047 81.77%);
+    --color-degradeTerciario: linear-gradient(180deg, #FCE112 67.71%, #CBB400 94.79%);
+    
+    --fuente-h1:'TT Norms';
+    --tamanio-h1:40px;
+    --fuente-h2:'Avenir Black';
+    --tamanio-h2: 20px;
+    --fuente-h3: var(--fuente-h1);
+    --tamanio-h3: 20px;
+    --fuente-h4:'Avenir Regular';
+    --tamanio-h4:14px;
+    --fuente-textoChico:'Avenir Book';
+    --tamanio-textoChico:14px;
+    --fuente-textoBody:'Avenir Book';
+    --tamanio--textoBody: 19px;
+    --fuente-textoBotones:'Avenir Black';
+    --tamanio--textoBotones: 11px;
+}
+
+html{
+    background-color: var(--backround-color);
+    overflow-x: hidden;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* TEXTOS */
+h1{
+    font-family: var(--fuente-h1);
+    font-size: var(--tamanio-h1);
+    color: white;
+}
+.h1{
+    font-family: var(--fuente-h1);
+    font-size: var(--tamanio-h1);
+    color: white;
+}
+.h2{
+    font-family:var(--fuente-h2);
+    font-size: var(--tamanio-h2);
+}
+.h3{
+    font-family:var(--fuente-h3);
+    font-size: var(--tamanio-h3);
+    letter-spacing: 0.05em;
+}
+.h4{
+    font-family: var(--fuente-h4);
+    font-size: var(--tamanio-h4);
+}
+
+
+.textoChico{
+    font-family:var(--fuente-textoChico);
+    font-size: var(--tamanio-textoChico);
+    color: #282725;
+}
+
+.textoBotones{
+    font-family: var(--fuente-textoBotones);
+    font-size: var(--tamanio--textoBotones);
+    color: white;
+    letter-spacing: 0.05em;
+}
+
+.textoBody{
+    font-family: var(--fuente-textoBody);
+    font-size: var(--tamanio--textoBody);
+    color: white;
+}
+
+                                          /* ASSETS */
+
+/* NAV */
+nav {
+    background-color: #080008;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    margin-top: 10px;
+}
+
+#logo {
+    width: 250px;
+    height: 20px;
+    background: no-repeat url(../resources/icos/simbolos/logo.svg) 50%;
+    cursor: pointer;
+}
+
+#barraBusqueda {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 460px;
+    height: 40px;
+    background: white;
+    border-radius: 8px;
+    margin-left: -140px;
+}
+
+#barraBusqueda span {
+    opacity: 50%;
+    margin-left: 15px;
+}
+
+#lupa {
+    background: no-repeat url(../resources/icos/simbolos/lupa.svg) 50%;
+    height: 22px;
+    width: 22px;
+    margin-right: 15px;
+}
+
+#perfil {
+    display: flex;
+    align-items: center
+}
+
+#iconoPerfil {
+    height: 50px;
+    width: 50px;
+    display: flex;
+}
+
+#iconoPerfil .circulo {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#iconoPerfil .borde {
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    left: -2px;
+    top: -2px;
+}
+
+#iconoPerfil .centro {
+    height: 90%;
+    width: 90%;
+    left: 5%;
+    top: 5%;
+}
+
+#iconoPerfil .imgCategoria {
+    height: 100%;
+    width: 100%;
+}
+#perfilInfo {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    justify-content: end;
+}
+#perfilInfo p {
+    color: white;
+    margin: 0px; 
+}
+#perfilDebajo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -3px;
+}
+#perfilDebajo p{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#flechaPerfil {
+    background: no-repeat url(../resources/icos/simbolos/flecha.svg) 20%;
+    height: 30px;
+    width: 20px;
+    scale: 0.5;
+    transform: rotate(90deg);
+    opacity: 85%;
+}
+#hamburguesa{
+    height: 343px;
+    width: 232px;
+    position: absolute;
+    top: 80px;
+    right: 110px;
+    z-index: 999;
+    display: none;
+}
+
+.breadCrumb{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.breadCrumb p{
+    margin-left: 20px;
+}
+
+
+      
+/* CATEGORIAS */
+.menuCategorias {
+    white-space: nowrap;
+    height: 75px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+#catContainer {
+    margin-left: 35px;
+    margin-right: 35px;
+    position: relative;
+    overflow: hidden;
+}
+
+#menuCategoriasul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 85px;
+    display: flex;
+}
+   #menuCategoriasul li {
+    margin-right: 100px; 
+    position: relative;
+   }
+ 
+   .circulo {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+}
+
+.borde {
+    border-radius: 500px;
+    background-image: var(--color-arcoiris);
+    width: 73px;
+    height: 75px;
+    position: absolute;
+    left: 0.5px;
+    top: 0px;
+}
+
+.centro {
+    border-radius: 500px;
+    background-color: rgba(12.750000189989805, 3.081249911338091, 3.081249911338091, 1);
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.contenedorCategoria {
+    background-color: var(--color-primario);
+    opacity: 0.8999999761581421;
+    width: 70px;
+    height: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    max-width: 100%;
+    margin-top: 48px;
+    margin-left: 2px;
+}
+
+.textoCategoria {
+    margin-top: 60px;
+    margin-left: 7px;
+    color: #fff;
+    font-size: var(--tamanio-texto-chico);
+
+}
+
+.imgCategoria {
+    max-width: 100%;
+}
+.categoria:hover .imgCategoria{
+    transform: scale(1.5);
+    overflow-y: visible;
+}
+#flechasCategoria{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#flechasCategoria button{
+    top: -60px;
+    position: relative;
+}
+#flechasCategoria #flechaColor{
+    right: 10px;
+}
+#flechasCategoria #flechaColorIzq{
+    left: 10px;
+}
+#flechaColor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20px;
+    height: 35px;
+    background: no-repeat url(../resources/icos/simbolos/flechaDerCategoria.svg) 50%;
+    border: none;
+}
+#flechaColorIzq{
+    transform: scaleX(-1);
+    top: 60px;
+     width: 20px;
+    height: 35px;
+    background: no-repeat url(../resources/icos/simbolos/flechaDerCategoria.svg) 50%;
+    border: none;
+}
+        
+#botonTodos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: .5px;
+}
+
+#botonTodos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fuente-h1);
+    font-size: var(--tamanio-h1);
+    width: 614px;
+    height: 60px;
+    background-image: var(--color-arcoiris);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    background-size: cover;
+    position: relative;
+    letter-spacing: .5px;
+}
+.btnContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+#botonTodos::before{
+    background-image: linear-gradient(to left, #CB487B, #D1B507, #5FAA5A, #3193C7);
+    content: "Ver todos";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 8px;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+#botonTodos:hover::before{
+    opacity: 1;
+}
+
+.botonDerechaChico {
+    opacity: 100;
+    pointer-events: auto;
+  }
+  .botonIzquierdaChico{
+    opacity: 0;
+  }
+
+        /* BODY */
+        
+        
+        
+        
+/* CARD */
+        
+.cardContainer{
+    width: 300px;
+    margin-right: 20px;
+    background: var(--color-arcoiris);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 16px 16px 0 rgba(0,0,0,.08);
+    overflow: visible;
+    transition: .2s ease;
+}
+.card-Img{
+    height: 170px;
+    width: 300px;
+    overflow: hidden;
+}
+.card .data{
+    padding: 15px 16px 13px;
+    width: 100%;
+    background: #fff;
+    position: relative;
+    box-sizing: border-box;
+}
+.card .data-category-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 80%;
+}
+.card .data-category {
+    max-width: calc(100% - 40px);
+}
+.card .data .playBtn {
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+.playBtn{
+    background-color: #080008;
+    height: 56px;
+    width: 56px;
+    justify-content: center;
+    align-items: center;
+}
+.playBtn .icon.links {
+    background-image: url(../resources/icos/simbolos/flecha.svg);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+.card .titulo{
+    color: #282725;
+    font-size: 22px;
+    white-space: nowrap;
+    font-weight: 800;
+    width: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 1.5em;
+    line-height: 1.5em;
+}
+
+/* Hover */
+.cardContainer:hover .card{
+    transform: translateX(5px) translateY(-5px);
+}
+
+/* CARRUSEL */
+
+.carrusel{
+    display: block;
+    box-sizing: border-box;
+}
+.carruselChico{
+    max-width: 1400px;
+}
+.containerMovedizo{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    touch-action: pan-y;
+}
+#gameContainer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: content-box;
+    transition: 0.4s ease;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    outline: none;
+    position: relative;
+    top: 0;
+    bottom: 0;
+}
+.slideBtn{
+    background: no-repeat url(../resources/icos/simbolos/Desplazar.png) 50%;
+    height: 55px;
+    width: 62px;
+    border: none;
+    margin-right: 55px;
+    transform: translateY(-150px);
+}
+.left{
+    transform: scaleX(-1) translateY(-150px);
+}
+
+
+
+
+
+/*  BIBLIOTECA */
+
+#biblioteca{
+    background-image: url(../resources/imagenes/otros/fondoColor2.png);
+    height: 810px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+#carruselBiblioteca{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.ContainerBiblioteca{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.ContainerBiblioteca .sup{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.ContainerBiblioteca .inf{
+    display: flex;
+    flex-direction: row;
+}
+.tituloBiblioteca{
+    padding-left: 65px;
+}
+
+#coment{
+    position: absolute;
+    color: white;
+    margin-top: -42px;
+    width: 450px;
+    margin-right: 85px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+@keyframes girar {
+    0% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .girar {
+    animation: girar 0.3s;
+  }
+  
+
+/* BOTONES */
+.botonSecundario {
+    width: 180px;
+    height: 40px;
+    background-image: var(--color-degradeV2);
+    border-radius: 13px;
+    border: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Agrega una transición suave para la transformación */
+  }
+  
+  
+  .botonSecundario:active {
+    transform: translateY(0); /* Vuelve a la posición original al hacer clic */
+    animation: bounce 0.5s ease; /* Agrega un rebote al hacer clic */
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+
+/* CARD BIBLIOTECA */
+
+.cardContainerBiblioteca{
+    width: 450px;
+    height: 250px;
+    margin-right: 20px;
+}
+.cardBiblioteca{
+    display: flex;
+    flex-direction: column;
+}
+.card-ImgBiblioteca{
+    width: 100%;
+    height: 100%;
+}
+.nameTag{
+    position: relative; 
+    top: -43px;
+    right: -8px;
+    white-space: nowrap;
+    max-width: 260px;
+    height: 32px;
+}
+.cardSup{
+    display: flex;
+}
+.tagContainer{
+    position: relative;
+    right: 252px;
+    top: 10px;
+    width: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.tagPrecio{
+    display: flex;
+    width: 70px;
+    height: 22px;
+    color: white;
+    justify-content: center;
+    background-color: rgba(13, 3, 3, 0.8);
+    margin-bottom: 20px;
+}
+.tagPrecio p{
+    margin: 0;
+}
+.cardContainerBiblioteca span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: inherit; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(13, 3, 3, 0.8);
+}
+
+/*animaciones*/
+.cardBiblioteca:hover .nameTag{
+    display: inline-block;
+    transform: scale(1.0);
+    transition: 0.3s ease;
+    top: -32;
+    left: 0;
+    max-width: 450px;
+    height: 43px;
+}
+
+
+/* MENU DESPLEGABLE */
+#menuPerfil {
+    position: absolute;
+    background-color: #080008;
+    border: 20px solid var(--color-arcoiris); 
+    width: 239px;
+    height: 348px;
+    top: 100%;
+    align-items: center;
+    display: none;
+    z-index: 2;
+}
+
+/* TAGS */
+#cardTag {
+    background-image: var(--color-degradeV2);
+    width: 94px;
+    height: 23px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    transition: background-image 0.4s ease, color 0.4s ease;
+}
+
+#cardTag:hover {
+    background-image: var(--color-degradeTerciario);
+    cursor: pointer;
+    transition: background-image 0.4s ease, color 0.4s ease;
+}
+
+#cardTag .textoBotones {
+    transition: transform 0.4s ease; /* Agrega transición de posición */
+}
+
+#cardTag #carritoIco {
+    opacity: 1; /* Asegura que el carrito esté visible por defecto */
+    transition: opacity 0.4s ease; /* Agrega transición de opacidad */
+}
+
+#cardTag.clicked .textoBotones {
+    transform: translateX(-25%); /* Centra el texto "Agregado" */
+}
+
+#cardTag.clicked #carritoIco {
+    opacity: 0; /* Oculta el carrito en el estado clickeado */
+}
+
+
+
+/* PUBLICIDAD */
+
+#publicidad{
+    width: 350px;
+    height: 730px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-primario);
+    width: 100%;
+    height: 505px;
+    margin-top: 100px;
+}
+#footerContent{
+    margin-left: 220px;
+    margin-right: 280px;
+}
+#footerContent h1{
+    margin: 0;
+    margin-left: 10px;
+}
+footer .lorem{
+    display: flex;
+    align-items: center;
+    width: 680px;
+}
+footer hr{
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 205px;
+}
+footer h4{
+    color: white;
+}
+footer .textoChico{
+    color: white;
+}
+#footerUp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#lineaColor {
+    width: 100%;
+}
+.footerGeneral{
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+}
+.footerl h1{
+    margin: 0;
+}
+.footerMinContent{
+    display: flex;
+    flex-direction: row;
+}
+.footerGeneral .footerMinContent hr{
+    height: 130px;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.links .h4{
+    margin: 0;
+}
+.footerSiguenos{
+    display: flex;
+    flex-direction: column;
+}
+.footerSiguenos .footerMinContent hr{
+    height: 80px;
+}
+.linkTrees{
+    display: flex;
+    flex-direction: row;
+}
+.copi{
+    text-align: right;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.copi p{
+    margin: 0;
+}
+.lorem .textoBody{
+    margin: 0;
+}
+#footerDown{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#opcionesFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 540px;
+}
+
+
+
+
+
+
+/* SECCIONES */
+#gameSection{
+    margin-left: 70px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+#upperSection{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+}
+#upperSection #publicidad{
+    margin-right: 90px;
+}
+.upperCarruseles{
+    display: flex;
+    flex-direction: column;
+    margin-top: -35px;
+}
+.carruselData{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#fondoForm{
+    background-image: url(../resources/imagenes/otros/FondoPagina.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#registerForm{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../resources/imagenes/otros/fondoColor2.png);
+    height: 690px;
+    width: 1010px;
+    color: white;
+    align-items: center;
+}
+.formContent{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.formContent input{
+    height: 30px;
+    width: 367px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.formContent hr{
+    height: 250px;
+    margin: 0;
+    opacity: 80%;
+}
+.formContent img{
+    height: 73px;
+    width: 310px;
+}
+.seccionIzq{
+    display: flex;
+    flex-direction: column;
+}
+.seccionDer{
+    display: flex;
+    flex-direction: column;
+}
+.formBotonera{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.formBotonera span{
+    color: var(--color-secundario);
+    margin: 0;
+    cursor: pointer;
+}
+.formBotonera p{
+    color:white;
+    margin: 0;
+}
+.required::after {
+    content: "*";
+    color: red;
+    margin-left: 5px; /* Espacio entre el asterisco y el texto del label */
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#seccion {
+    text-align: center;
+}
+
+#seccion img {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    /* Espaciado entre la imagen y el primer label */
+}
+
+#seccion label {
+    display: flex;
+    align-self: start;
+    margin-bottom: 5px;
+}
+
+#seccion input {
+    height: 30px;
+    width: 367px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+#registerFormsign {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../resources/imagenes/otros/fondoColor2.png);
+    height: 630px;
+    width: 505px;
+    color: white;
+    align-items: center;
+}
+
+#registerFormsign .formBotonera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+        
+/* PAGINA JUEGO */
+
+#gameArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#juegoPrincipal{
+    width: 1322px;
+    height: 720px;
+}
+#gameArea .social{
+    width: 341px;
+    height: 28px;
+}
+#gameArea #ayuda{
+    width: 55px;
+    height: 55px;
+    border-radius: 40px;
+}
+#herramientasJuego{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: -460px;
+    bottom: -20px;
+    height: 55px;
+}
+#reglas{
+    position: absolute;
+    display: none;
+    transition: 2s ease;
+    margin-left: 750px;
+}
+#margen{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#gameWrapper{
+    width: 1520px;
+    background-color: rgba(42, 39, 39, 0.742);
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+}
+#wrapperIzq{
+    width: 1010px;
+    margin-left: 100px;
+    margin-top: 110px;
+}
+#wrapperDer{
+    margin-top: 163px;
+    margin-right: 100px;
+}
+#about{
+    display: flex;
+    flex-direction: column;
+}
+#about .textoBody{
+    max-width: 865px;
+}
+.multimedia{
+    width: 865px;
+    height: 400px;
+}
+#comentarios{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+#headerComentarios{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#headerComentarios hr{
+    transform: rotate(90deg);
+}
+#headerComentarios p{
+    color: white;
+}
+.myUsuario{
+    display: flex;
+}
+.nombreMyUsuario{
+    color: white;
+    margin-left: 85px;
+    position: relative;
+    top: -10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.bloqueComentar{
+    width: 750px;
+    height: 80px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    text-align: center;
+    margin-top: 3px;
+    margin-left: 88px;
+}
+.bloqueComentario{
+    width: 750px;
+    height: 55px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    text-align: center;
+    margin-top: 3px;
+    margin-left: 88px;
+}
+.bloqueComentario p{
+    margin-left: 10px;
+}
+.bloqueComentar p{
+    margin-left: 10px;
+    opacity: 85%;
+}
+.infoUsuario{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+    top: 10px;
+}
+.botoneraComentar{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 20px;
+    right: 170px;
+    justify-content: end;
+}
+.botoneraComentar button{
+    width: 100px;
+    height: 35px;
+}
+.botoneraComentar p{
+    color: white;
+}
+#filtros{
+    display: flex;
+    flex-direction: row;
+    
+}
+#filtros p{
+    color: white;
+}
+#verComentarios{
+    display: flex;
+    flex-direction: column;
+}
+#carruselVertical{
+    display: flex;
+    flex-direction: column;
+}
+#carruselVertical .cardContainer{
+    margin-bottom: 55px;
+}
+
+
+.hidden{
+    display: none;
+}
+
+
+        
+/* OVERLAY CARGA */
+
+#carga{
+    background-color: black;
+    opacity: 100%;
+}
+#overlayCarga {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  opacity: 1; /* Asegúrate de que la opacidad inicial sea 1 */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.9s; /* Agrega una transición para suavizar el cambio de opacidad */
+}
+
+.loader {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #CB487B, #D1B507 ,#5FAA5A ,#3193C7 );
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(to right, #CB487B, #D1B507 ,#5FAA5A ,#3193C7 );
+}
+
+.loader span:nth-child(1) {
+    filter: blur(5px);
+}
+
+.loader span:nth-child(2) {
+    filter: blur(10px);
+}
+
+.loader span:nth-child(3) {
+    filter: blur(25px);
+}
+
+.loader span:nth-child(4) {
+    filter: blur(50px);
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: no-repeat url(../resources/icos/simbolos/logo.svg) 50%;
+    background-size: 300px 500px;
+    border: solid white 10px;
+    border-radius: 50%;
+}
+
+
+.loader-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.loaderNum {
+    color: white;
+    transition: width 5s linear, opacity 0.5s;
+}     
+        
+        
+        
+/* ANIMACION */
+@keyframes bounceIn {
+    0%, 40%, 60%, 100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-30px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
+
+  /* BOTON SECUNDARIO ANIM*/
+
+.botonSecundario {
+  width: 180px;
+  height: 40px;
+  background-image: var(--color-degradeV2);
+  border-radius: 13px;
+  border: none;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Agrega una transición suave para la transformación */
+}
+
+.botonSecundario:hover {
+    transform: translateY(-8px); /* Levanta el botón 5px en hover */
+    background-image: var(--color-arcoiris);
+}
+
+.botonSecundario.bouncing {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+  
+  
+        
+  @media only screen and (max-width: 760px) {
+
+    body{
+        overflow-x: hidden;
+    }
+    #logo {
+        width: 25%px;
+        height: 20px;
+    }
+
+    #barraBusqueda {
+        display: none;
+    }
+
+
+    #perfilInfo {
+        display: none;
+    }
+
+    nav {
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding: 0px;
+    }
+
+    #upperSection{
+        display: none;
+    }
+
+   
+#gameSection {
+    margin-left: 20px;
+}
+
+    #biblioteca{
+        align-items: center;
+    }
+    .tituloBiblioteca {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+    .cardContainerBiblioteca {
+        width: 348px;
+    }
+    .ContainerBiblioteca {
+        margin-left: 5px;
+    }
+    
+    .ContainerBiblioteca .sup {
+        margin-bottom: -40px;
+    }
+
+    .btnContainer {
+        height: 100px;
+        max-width: 70%;
+    }
+
+    #publicidad {
+        display: none;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        color: white;
+    }
+
+
+    #footerContent {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #footerUp {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+
+    }
+    #opcionesFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .lorem hr {
+        transform: translate(-160px, -310px);
+    rotate: 90deg;
+    }
+
+    .lorem {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        margin-bottom: 45px;
+    }
+
+
+    .linkTrees {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+    #footerDown #logo{
+        display: none;
+    }
+
+    .copi{
+        text-align: right;
+        margin-bottom: 40px;
+        margin-top: 10px;
+        width: 100%;
+        position: relative;
+        right: 0;
+    }
+
+
+}
+        
+        
+        
+        
+        
+        
+        
+        

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="30px" viewBox="0 0 18 30" version="1.1">
+    <title>icon / arrow@1.5x</title>
+    <defs class="__web-inspector-hide-shortcut__">
+        <path d="M15.9196352,32.6298236 C14.9330557,33.6139924 13.3361358,33.6139924 12.3515656,32.6288185 C11.369339,31.6441801 11.369339,30.0476487 12.3520594,29.0631189 L22.4902949,18.9244372 L12.3539254,8.78762152 C11.3691923,7.80288847 11.3691923,6.20614252 12.3532983,5.22203756 C13.3376889,4.23463104 14.9357708,4.23463104 15.9201454,5.22141745 L27.8412006,17.142937 C28.3203902,17.62154 28.5791893,18.2601972 28.5791893,18.9244372 C28.5791893,19.5895684 28.3198956,20.2316693 27.8408677,20.7081275 L15.9196352,32.6298236 Z" id="path-1"/>
+    </defs>
+    <g id="CN-Design-Kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-571.000000, -327.000000)">
+            <g id="icon-/-arrow" transform="translate(560.000000, 323.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"/>
+                </mask>
+                <use id="Fill-1" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"/>
+                <g id="Group" mask="url(#mask-2)" fill="#FFFFFF">
+                    <g id="Color/Grey/0">
+                        <rect id="Rectangle" x="0" y="0" width="38" height="38"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
